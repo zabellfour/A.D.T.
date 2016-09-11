@@ -2,7 +2,7 @@
     @extend %listreset;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: center;
     padding: 14px 0;
     align-items: stretch;
     flex-wrap: wrap;
@@ -13,11 +13,18 @@
         text-align: center;
         display: flex;
         align-items: center;
-        justify-content: center;
-        height: 100%;
+		justify-content: center;
+        min-height: 100%;
         @include media('<tablet') {
-            width: 100%;
+            width: 33.332%;
+            margin-bottom: 30px;
+
         }
+         @include media('<phone') {
+        	width: 50%;
+         
+         }
+        		
         &:after {
             position: absolute;
             content: '';
@@ -28,6 +35,11 @@
             width: 1px;
             height: auto;
             background-color: #f3f3f3;
+             @include media('<tablet') {
+            	display: none;
+             
+             }
+            		
         }
         &:first-child {
             @include media('>=tablet') {
@@ -55,12 +67,12 @@
                 margin: 0 auto;
 
             }
-             @include media('>=tablet') {
-            
-             height: auto !important;
-             width: auto !important;
-             }
-            		
+     
+            		 @include media('<tablet') {
+            			width: 100%;
+            		 
+            		 }
+            				
         }
         
         		

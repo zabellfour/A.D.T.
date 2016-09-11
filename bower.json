@@ -25,6 +25,7 @@
     "include-media": "~1.4.2",
     "bootstrap-sass": "^3.3.7",
     "owl.carousel": "^2.1.6",
-    "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git#^10.0.1"
+    "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git#^10.0.1",
+    "matchHeight": "matchheight#^0.7.0"
   }
 }

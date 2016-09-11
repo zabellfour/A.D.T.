@@ -1,0 +1,96 @@
+#footer {
+    background-color: $white;
+    padding-top: 44px;
+    padding-bottom: 60px;
+    @include media('<desktop') {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 12px;
+    }
+    a:hover {
+        color: $red;
+
+    }
+    .telephone-inverse {
+        color: $red;
+        font-size: 24px;
+        font-weight: bold;
+        vertical-align: middle;
+        @include media('<widescreen') {
+            font-size: 18px;
+        }
+        i {
+            display: inline-block;
+            margin-right: 8px;
+        }
+    }
+    .footer-top {
+        display: flex;
+        align-items: center;
+        padding-bottom: 44px;
+        justify-content: space-between;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 70px;
+        @include media('<desktop') {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+    }
+    .footer-nav {
+        @extend %listreset;
+        @include media('<desktop') {
+            margin-bottom: 10px;
+        }
+        li {
+            display: inline-block;
+            padding-right: 37px;
+            &.active a{
+				color: $red;
+            }
+            @include media('<widescreen') {
+                padding-right: 14px;
+                font-size: 12px;
+            }
+            @include media('<tablet') {
+                width: 100%;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+            a {
+                text-transform: uppercase;
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+    }
+    .contact-holder {
+        padding-right: 50px;
+        a {
+            display: block;
+        }
+        address {
+            padding-top: 28px;
+        }
+    }
+    .copy {
+        display: block;
+        margin-bottom: 28px;
+    }
+    .footer-logo {
+        @extend %clearfix;
+        .navbar-brand {
+            float: right;
+            padding: 30px 0;
+            @include media('<tablet') {
+                float: left;
+            }
+        }
+    }
+    .mail-link {
+        white-space: nowrap;
+    }
+}

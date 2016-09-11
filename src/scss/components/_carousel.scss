@@ -85,16 +85,3 @@
     }
 }
 
-#carousel2 {
-    img {
-        height: 70px;
-        width: auto;
-    }
-    .owl-prev,
-    .owl-next {
-        @include media('<tablet') {
-            display: block !important;
-            color: rgba($black, .5);
-        }
-    }
-}

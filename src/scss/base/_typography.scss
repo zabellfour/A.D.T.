@@ -21,6 +21,7 @@ h6,
 h1,
 .h1 {
     font-size: $h1-font-size;
+text-transform: uppercase;
     @include media('<desktop') {
         font-size: 30px;
         margin-bottom: 15px;
@@ -30,16 +31,39 @@ h1,
 h2,
 .h2 {
     font-size: $h2-font-size;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 2.2px;
+    &.line-x{
+        position: relative;
+        padding-left: 97px;
+        letter-spacing: 0.5px;
+        &:after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform:translateY(-50%);
+            left: 0;
+            height: 4px;
+            width: 68px;
+            background-color: $red;
+        }
+    }
 }
 
 h3,
 .h3 {
     font-size: $h3-font-size;
+    text-transform: uppercase;
+
 }
 
 h4,
 .h4 {
     font-size: $h4-font-size;
+    text-transform: uppercase;
+    color:$red;
+    margin-bottom: 10px;
 }
 
 h5,

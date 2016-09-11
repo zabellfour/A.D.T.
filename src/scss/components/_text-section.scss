@@ -1,3 +1,74 @@
-.main-info{
-	background-color: $white;
+.main-info {
+    background-color: $white;
+    margin-bottom: 80px;
+     @include media('<tablet') {
+    margin-bottom: 30px;
+     
+     }
+    		
+    .text-image {
+        position: relative;
+    }
+    .img-box {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 50%;
+        background-size: cover;
+        background-position: 50% 50%;
+        @include media('<tablet') {
+            width: 100%;
+            position: static;
+            height: 250px;
+        }
+    }
+    .text-box {
+        padding: 68px 80px 60px 0;
+        width: 50%;
+        @include media('<widescreen') {
+            padding: 20px;
+        }
+        @include media('<desktop') {}
+        @include media('<tablet') {
+            width: 100%;
+            padding-right: 0;
+        }
+        p {
+            margin-bottom: 18px;
+        }
+        h2 {
+            margin-bottom: 26px;
+            margin-right: 20px;
+        }
+        .btn {
+            margin-bottom: 43px;
+        }
+    }
+}
+
+.marked-red {
+    color: $red;
+}
+
+.adv-block {
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.30);
+    margin: 0 0 73px;
+    padding: 76px 50% 59px 97px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url('../../build/images/img2.jpg');
+    @include media('<desktop') {
+        padding: 30px 40% 30px 50px;
+        margin-bottom: 40px;
+    }
+    @include media('<tablet') {
+        padding: 15px 40% 15px 20px;
+        margin-bottom: 30px;
+    }
+     @include media('<phone') {
+    padding: 10px 20% 10px 10px;
+     
+     }
+    		
 }

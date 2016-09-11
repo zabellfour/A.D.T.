@@ -33,5 +33,11 @@
         &:hover {
             background-color: $red;
         }
+        i{
+            font-size: 17px;
+            line-height: 19px;
+            display: inline-block;
+            margin-left: 5px;
+        }
     }
 }
