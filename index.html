@@ -1,21 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Title</title>
-  <link media="all" rel="stylesheet" href="build/css/vendor.css">
-  <link media="all" rel="stylesheet" href="build/css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADT</title>
+    <link media="all" rel="stylesheet" href="build/css/vendor.css">
+    <link media="all" rel="stylesheet" href="build/css/style.css">
 </head>
 
 <body>
-  <div id="wrapper">
-    <h2 class="starter-box">^⨀ᴥ⨀^<br>Make Somesssthing Awesome</h2>
-    <i class="icon icon-hand-1"></i>
-  </div>
-  <script src="build/js/vendor.js"></script>
-  <script src="build/js/app.js"></script>
+    <header id="header">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img src="build/images/logo.png" alt="ADT Assistance Depannage Toulousain">
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#">accueial</a></li>
+                        <li><a href="#">dépannage chaudière</a></li>
+                        <li><a href="#">plomberie - chauffage</a></li>
+                        <li><a href="#">contrats de maintenance</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div style="margin-top: 30px; display: flex;justify-content: center;text-align: center; flex-direction: column;">
+        <div>
+            <h1>Typography of document</h1>
+            <i class="icon icon-hand-1"></i>
+            <h1>$h1-font-size: 45px</h1>
+            <h2>$h2-font-size: 30px</h2>
+            <h3>$h3-font-size: 22px</h3>
+            <h4>$h4-font-size: 15px</h4>
+            <h5>$h5-font-size: 14px</h5>
+            <h6>$h6-font-size: 12px</h6>
+        </div>
+        <div >
+
+            <ul style="padding:100px 0 0; font-size: 20px; color: red;">
+            <li>pages-list:</li>
+                <li> 
+                    <a href="home.html">home</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="build/js/vendor.js"></script>
+    <script src="build/js/app.js"></script>
 </body>
 
 </html>

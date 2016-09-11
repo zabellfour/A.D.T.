@@ -1,0 +1,86 @@
+// Colors
+ 
+$gray: 								#646464;
+$gray-light: 						#a0a0a0;
+$gray-lightest: 					#f3f3f3;
+$black: 							#000;
+$white: 							#fff;
+$light-blue: 						#39f;
+$red: 								#e52b38;
+
+$base-font-sans-serif: 				'PT Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-serif: 					'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+
+// Body
+$base-text-color: 					$gray !default;
+$base-background-color:				$gray-lightest !default;
+$base-font-size: 					15px !default;
+$base-line-height: 					1.6 !default;
+$base-font-family: 					$base-font-sans-serif !default;
+
+$vertical-rhythm: 					($base-line-height * 1em);
+
+$base-min-width: 					320px;
+
+// Liks
+$base-link-color: 					$black;
+
+// Buttons
+$btn-color: 						$white !default;
+$btn-background: 					$red !default;
+$btn-padding: 						10px 5px !default;
+$btn-font-size: 					14px !default;
+ 
+// Forms
+$form-element-padding: 				$btn-padding !default;
+$form-element-border-color: 		$gray !default;
+$form-element-focus-border-color:   $black !default;
+$placeholder-color: 				$gray !default;
+
+// Headers
+$h1-font-size: 						45px;
+$h2-font-size: 						30px; 
+$h3-font-size: 						22px;
+$h4-font-size: 						15px;
+$h5-font-size: 						14px;
+$h6-font-size: 						12px;
+
+$headings-font-family: 				inherit !default;
+$headings-color: 					$black !default;
+$animation-speed:					0.3s;
+
+//== Navbar
+
+$border-radius-base:                0px;
+$navbar-height:                     120px;
+$navbar-margin-bottom:              0;
+$navbar-border-radius:              $border-radius-base;
+$navbar-padding-horizontal:         0;
+$navbar-padding-vertical:           15px;
+
+$navbar-default-color:              $black;
+$navbar-default-bg:                 $white;
+$navbar-default-border:             transparent;
+
+// Navbar links
+$navbar-default-link-color:         $black;
+$navbar-default-link-hover-color:   $red;
+$navbar-default-link-active-color:  $red;
+$navbar-default-link-active-bg:     transparent;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:    $red;
+$navbar-default-toggle-icon-bar-bg: $gray;
+$navbar-default-toggle-border-color:$red;
+
+//== Buttons
+$btn-font-weight:                	700;
+$btn-default-color:              	$white;
+$btn-default-bg:                 	$red;
+$btn-default-border:                transparent;
+$btn-primary-color:           	    $white;
+$btn-primary-bg:                	$red;
+$btn-primary-border:                transparent;
+$btn-border-radius-base:      		$border-radius-base !default;
+$btn-border-radius-large:           $border-radius-base !default;
+$btn-border-radius-small:           $border-radius-base !default;

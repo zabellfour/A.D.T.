@@ -1,8 +1,11 @@
 /* Vendors*/
 @import './bower/include-media/dist/include-media';
-
+@import 'vendors/icons';
+@import 'vendors/fonts';
+ 
 /* Base modules*/
 @import 'base/variables';
+@import 'base/bootstrap-custom';
 @import 'base/functions';
 @import 'base/mixins';
 @import 'base/helpers';
@@ -10,5 +13,14 @@
 @import 'base/typography';
 @import 'base/forms';
 
+
 /* Components */
-@import 'components/starter-box';
+@import 'components/navbar';
+@import 'components/carousel';
+@import 'components/buttons';  
+@import 'components/buttons'; 
+@import 'components/partners'; 
+@import 'components/text-section'; 
+
+/* Layouts */
+@import 'layouts/header'

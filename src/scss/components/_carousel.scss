@@ -1,0 +1,100 @@
+.owl-carousel {
+    position: relative;
+    .slide {
+        min-height: 590px;
+        background-size: cover;
+        background-position: 50% 50%;
+        .va-wrapper {
+            @include v-align(590px);
+            @include media('<desktop') {
+                @include v-align(350px);
+            }
+            @include media('<tablet') {
+                @include v-align(300px);
+                text-align: left;
+            }
+        }
+        @include media('<desktop') {
+            min-height: 350px;
+        }
+        @include media('<tablet') {
+            min-height: 300px;
+        }
+    }
+    .owl-prev,
+    .owl-next {
+        position: absolute;
+        top: 50%;
+        left: 6%;
+        transform: translateY(-50%);
+        font-size: 0;
+        z-index: 10;
+        color: rgba($white, .5);
+        transition: color .3s;
+        @include media('<1500px') {
+            left: 20px;
+        }
+        @include media('<1300px') {
+            left: 10px;
+        }
+        @include media('<desktop') {
+            display: none;
+        }
+        &:hover {
+            color: rgba($white, 1);
+        }
+        &:after {
+            font-family: icomoon;
+            content: "\e902";
+            font-size: 66px;
+            font-weight: 300 !important;
+            @include media('<1300px') {
+                font-size: 30px;
+            }
+        }
+    }
+    .owl-next {
+        left: auto;
+        right: 6%;
+        @include media('<1500px') {
+            right: 20px;
+        }
+        @include media('<1300px') {
+            right: 10px;
+        }
+        &:after {
+            content: "\e901"
+        }
+    }
+    .container {
+        text-align: left;
+    }
+    .text-holder {
+        max-width: 330px;
+        padding-top: 30px;
+        h1 {
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            color: $white;
+            text-transform: uppercase;
+            line-height: 1.2;
+            @include media('<desktop') {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+#carousel2 {
+    img {
+        height: 70px;
+        width: auto;
+    }
+    .owl-prev,
+    .owl-next {
+        @include media('<tablet') {
+            display: block !important;
+            color: rgba($black, .5);
+        }
+    }
+}

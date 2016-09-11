@@ -1,0 +1,11 @@
+#header{
+	position: relative;
+	z-index: 2;
+	.btn-tel{
+		position: absolute;
+		right: 17px;
+		top: 100%;
+		background-color: $red;
+		color: $white;
+	}
+}
