@@ -8,6 +8,12 @@
     		
     .text-image {
         position: relative;
+         @include media('<tablet') {
+        	display: flex;
+        	flex-direction: column-reverse;
+         	
+         }
+        		
     }
     .img-box {
         position: absolute;
@@ -21,6 +27,8 @@
             width: 100%;
             position: static;
             height: 250px;
+            display: flex;
+
         }
     }
     .text-box {

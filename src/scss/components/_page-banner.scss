@@ -1,8 +1,15 @@
 .contact-banner {
 	height: 380px;
-	padding: 153px 0 0 0;
 	background-size: cover;
 	background-position: 50% 50%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	 @include media('<tablet') {
+		height: 300px;
+	 
+	 }
+			
 }
 .banner-title {
 	h1 {
@@ -10,5 +17,7 @@
         color: $white;
         text-transform: uppercase;
         line-height: 1.2;
+        margin-bottom: 0;
 	}
 }
+
