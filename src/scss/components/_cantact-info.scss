@@ -5,9 +5,11 @@
     }
 }
 .contact-block {
+	h2 {
+		margin-bottom: 30px;
+	}
 	.left-side {
-		padding-top: 80px;
-		padding-bottom: 65px;
+		padding: 80px 90px 80px 15px;
 	}
 	.right-side {
 		padding-top: 62px;
@@ -26,6 +28,7 @@
 	hr {
 		position: relative;
 		border-top: 1px solid #f3f3f3;
+		margin: 27px 0px;
 		&:before {
 			content: "";
 			position: absolute;
@@ -37,8 +40,8 @@
 		&:after {
 			content: "";
 			position: absolute;
-			width: 15px;
-			right: -15px;
+			width: 90px;
+			right: -90px;
 			top: -1px;
 			border-top: 1px solid #f3f3f3;
 		}
