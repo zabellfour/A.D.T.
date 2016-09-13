@@ -54,6 +54,19 @@
       .pipe(browserSync.stream());
   });
 
+  gulp.task('buildother', function() {
+    //remove sourcemap for production
+    var enableDebug = this.seq.slice(-1)[0] === 'production';
+    return browserify({ entries: `./${Paths.src}/${Paths.srcJS}/custom-map.js`, debug: !enableDebug })
+      .transform('babelify', { presets: ['es2015'] })
+      .bundle().on('error', function(err) {
+        showError.apply(this, ['JS error', err])
+      })
+      .pipe(source('custom-map.js'))
+      .pipe(gulp.dest(`./${Paths.build}/${Paths.buildJS}`))
+      .pipe(browserSync.stream());
+  });
+
   /**
    * Build js vendor (concatenate vendor array)
    */
@@ -205,6 +218,10 @@
       .pipe(gulp.dest(`./${Paths.build}/${Paths.fonts}/`));
   });
 
+ gulp.task('copyinc', function() {
+    gulp.src([`./${Paths.src}/${Paths.inc}/**/*`])
+      .pipe(gulp.dest(`./${Paths.build}/${Paths.inc}/`));
+  });
   /**
    * Show error in console
    * @param  {String} preffix Title of the error
@@ -216,7 +233,7 @@
     this.emit("end");
   }
   // Default Gulp Task
-  gulp.task('default', ['buildCustomJS', 'buildSass', 'buildJsVendors', 'buildStylesVendors', 'copyFonts', 'imageMin', 'browserSyncServer', 'watch']);
-  gulp.task('dev', ['buildCustomJS', 'buildSass', 'buildJsVendors', 'buildStylesVendors', 'copyFonts', 'imageMin', 'watch']);
+  gulp.task('default', ['buildCustomJS','copyinc', 'buildSass', 'buildJsVendors','buildother', 'buildStylesVendors', 'copyFonts', 'imageMin', 'browserSyncServer', 'watch']);
+  gulp.task('dev', ['buildCustomJS','copyinc', 'buildSass', 'buildJsVendors', 'buildother','buildStylesVendors', 'copyFonts', 'imageMin', 'watch']);
 
 }());
