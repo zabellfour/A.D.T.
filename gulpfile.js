@@ -219,7 +219,7 @@
   });
 
  gulp.task('copyinc', function() {
-    gulp.src([`./${Paths.src}/${Paths.inc}/**/*`])
+    gulp.src([`./${Paths.src}/${Paths.inc}/*.json`])
       .pipe(gulp.dest(`./${Paths.build}/${Paths.inc}/`));
   });
   /**
@@ -233,7 +233,7 @@
     this.emit("end");
   }
   // Default Gulp Task
-  gulp.task('default', ['buildCustomJS','copyinc', 'buildSass', 'buildJsVendors','buildother', 'buildStylesVendors', 'copyFonts', 'imageMin', 'browserSyncServer', 'watch']);
-  gulp.task('dev', ['buildCustomJS','copyinc', 'buildSass', 'buildJsVendors', 'buildother','buildStylesVendors', 'copyFonts', 'imageMin', 'watch']);
+  gulp.task('default', ['buildCustomJS', 'buildSass', 'buildJsVendors', 'buildStylesVendors', 'copyFonts', 'imageMin', 'browserSyncServer', 'watch']);
+  gulp.task('dev', ['buildCustomJS', 'buildSass', 'buildJsVendors', 'buildStylesVendors', 'copyFonts', 'imageMin', 'watch']);
 
 }());
