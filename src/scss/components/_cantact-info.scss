@@ -1,0 +1,58 @@
+.different-bg {
+	background: linear-gradient(to right,  #fff 0%, #fff 50%,#f3f3f3 50%,#f3f3f3 100%);
+		@include media('<desktop') {
+        background: $white;
+    }
+}
+.left-side {
+	padding-top: 80px;
+	padding-bottom: 65px;
+}
+.right-side {
+	padding-top: 62px;
+	padding-bottom: 65px;
+	@include media('<desktop') {
+        background: $gray-lightest;
+	}
+}
+.red-line {
+	display: block;
+	width: 68px;
+	height: 4px;
+	background: $red;
+}
+hr {
+	position: relative;
+	border-top: 1px solid #f3f3f3;
+	&:before {
+		content: "";
+		position: absolute;
+		width: 15px;
+		left: -15px;
+		top: -1px;
+		border-top: 1px solid #f3f3f3;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		width: 15px;
+		right: -15px;
+		top: -1px;
+		border-top: 1px solid #f3f3f3;
+	}
+}
+
+.contact-input-group {
+	.form-control {
+		height: auto;
+		margin-bottom: 10px;
+		padding: 10px 34px;
+		font-size: 15px;
+		line-height: 3;
+		border: none;
+		resize: none;
+	}
+	.btn {
+		float: right;
+	}
+}

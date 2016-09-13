@@ -21,7 +21,10 @@
 @import 'components/buttons'; 
 @import 'components/partners'; 
 @import 'components/text-section'; 
-@import 'components/thumbs'; 
+@import 'components/thumbs';
+@import 'components/page-banner.scss';
+@import 'components/cantact-info.scss'; 
+@import 'components/google-map.scss'; 
 
 /* Layouts */
 @import 'layouts/header';
