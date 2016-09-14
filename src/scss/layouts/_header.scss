@@ -1,11 +1,29 @@
-#header{
-	position: relative;
-	z-index: 2;
-	.btn-tel{
-		position: absolute;
-		right: 17px;
-		top: 100%;
-		background-color: $red;
-		color: $white;
-	}
+#header {
+    position: relative;
+    z-index: 2;
+    .btn-tel {
+        position: absolute;
+        right: 17px;
+        top: 100%;
+        background-color: $red;
+        color: $white;
+    }
+    button.navbar-toggle:not(.collapsed) {
+        position: relative;
+        padding-bottom: 16px;	
+        span:nth-child(2) {
+            transform: rotate(45deg);
+            position: absolute;
+            transform-origin: 50% 50%;
+            margin-top: 6px;
+            & + span {
+                background-color: transparent;
+            }
+            & + span + span {
+                transform: rotate(-45deg);
+                margin-top: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
 }

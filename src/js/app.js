@@ -28,3 +28,18 @@ $(document).ready(function() {
         selector: '.smooth'
     });
 });
+
+$(function() {
+    var url = window.location.pathname,
+        urlRegExp = new RegExp(url.replace(/\/$/, ''));
+    $('#navbar1 .navbar-right > li > a').each(function() {
+        if (urlRegExp.test(this.href)) {
+            $(this).parent('li').addClass('active');
+        }
+    });
+    $('.footer-nav > li > a').each(function() {
+        if (urlRegExp.test(this.href)) {
+            $(this).parent('li').addClass('active');
+        }
+    });
+});
